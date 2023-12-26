@@ -10,7 +10,7 @@ spring:
     defer-datasource-initialization: true
 
   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/Team10
+      url: jdbc:mysql://localhost/Team10
       username: root
       password:
       driver-class-name: com.mysql.cj.jdbc.Driver
