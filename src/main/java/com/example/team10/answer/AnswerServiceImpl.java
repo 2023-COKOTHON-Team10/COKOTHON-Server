@@ -16,7 +16,7 @@ public class AnswerServiceImpl implements AnswerService {
     public Long save(AnswerRequest request) {
         Answer answer = answerRepository.save(request.toEntity());
 
-        return answer.getIdNumber();
+        return answer.getId();
     }
 
 }

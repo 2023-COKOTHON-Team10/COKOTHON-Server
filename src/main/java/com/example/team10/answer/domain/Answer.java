@@ -20,8 +20,6 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long userId;
-
     private Long ans1;
 
     private Long ans2;
@@ -34,7 +32,8 @@ public class Answer {
 
     // 고유번호
     @Column(nullable = false)
-    private Long idNumber;
+    private String userUniqueNumber;
+
 
 
 }

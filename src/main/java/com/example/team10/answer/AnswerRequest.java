@@ -16,18 +16,17 @@ public class AnswerRequest {
     private Long ans3;
     private Long ans4;
     private Long ans5;
-    private Long idNumber;
+    private String userUniqueNumber;
 
     public Answer toEntity() {
         return Answer.builder()
                 .id(id)
-                .userId(userId)
                 .ans1(ans1)
                 .ans2(ans2)
                 .ans3(ans3)
                 .ans4(ans4)
                 .ans5(ans5)
-                .idNumber(idNumber)
+                .userUniqueNumber(userUniqueNumber)
                 .build();
     }
 
