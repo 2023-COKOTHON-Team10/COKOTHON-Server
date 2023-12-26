@@ -1,5 +1,6 @@
 package com.example.team10.answer;
 
+import com.example.team10.answer.dto.AnswerRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

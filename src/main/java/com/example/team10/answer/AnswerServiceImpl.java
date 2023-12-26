@@ -2,6 +2,7 @@ package com.example.team10.answer;
 
 import com.example.team10.answer.domain.Answer;
 import com.example.team10.answer.domain.AnswerListResponse;
+import com.example.team10.answer.dto.AnswerRequest;
 import com.example.team10.user.UserRepository;
 import com.example.team10.user.domain.User;
 import lombok.RequiredArgsConstructor;
