@@ -1,4 +1,4 @@
-package com.example.team10.answer;
+package com.example.team10.answer.dto;
 
 import com.example.team10.answer.domain.Answer;
 import com.example.team10.user.domain.User;

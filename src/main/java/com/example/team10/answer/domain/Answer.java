@@ -36,7 +36,7 @@ public class Answer {
     @Column(nullable = false)
     private Long ans5;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
