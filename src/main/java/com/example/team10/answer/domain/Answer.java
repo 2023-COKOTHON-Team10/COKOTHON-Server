@@ -1,6 +1,7 @@
 package com.example.team10.answer.domain;
 
 
+import com.example.team10.user.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,20 +21,23 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(nullable = false)
     private Long ans1;
 
+    @Column(nullable = false)
     private Long ans2;
 
+    @Column(nullable = false)
     private Long ans3;
 
+    @Column(nullable = false)
     private Long ans4;
 
+    @Column(nullable = false)
     private Long ans5;
 
-    // 고유번호
-    @Column(nullable = false)
-    private String userUniqueNumber;
-
-
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }

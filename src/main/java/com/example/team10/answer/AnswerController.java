@@ -12,8 +12,8 @@ public class AnswerController {
     private final AnswerService answerService;
 
     @PostMapping("/api/answer")
-    public Long save(@RequestBody AnswerRequest request) {
-        return answerService.save(request);
+    public void save(@RequestBody AnswerRequest request) {
+        answerService.save(request);
     }
 
 

@@ -11,5 +11,5 @@ spring:
   datasource:
     url: "jdbc:mysql://localhost/Team10"
     username: "root"
-    password: "aornsxla" # MySQL ???? ??
+    password: "si8zcqt5" # MySQL ???? ??
     driver-class-name: com.mysql.cj.jdbc.Driver
