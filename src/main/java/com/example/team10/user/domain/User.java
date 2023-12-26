@@ -1,14 +1,28 @@
 package com.example.team10.user.domain;
 
 
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
-@Table
-
+@Table(name = "user")
+@Entity
+@NoArgsConstructor
+@Builder
 public class User {
 
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Long id;
+
+    @Column(name = "user_name", nullable = false)
+    private String name;
+
+    @Column(name = "user_uniquenumber")
+    private String uniqueNumber;
 }

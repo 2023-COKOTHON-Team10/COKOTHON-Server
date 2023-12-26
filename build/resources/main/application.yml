@@ -1,7 +1,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
@@ -9,7 +9,7 @@ spring:
     defer-datasource-initialization: true
 
   datasource:
-    url: "jdbc:mysql://localhost/Tour"
+    url: "jdbc:mysql://localhost/Team10"
     username: "root"
-    password: "" # MySQL ???? ??
+    password: "aornsxla" # MySQL ???? ??
     driver-class-name: com.mysql.cj.jdbc.Driver
