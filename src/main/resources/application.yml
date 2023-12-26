@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    defer-datasource-initialization: true
+
+  datasource:
+    url: "jdbc:mysql://localhost/Tour"
+    username: "root"
+    password: "" # MySQL ???? ??
+    driver-class-name: com.mysql.cj.jdbc.Driver
