@@ -2,6 +2,7 @@ package com.example.team10.quiz;
 
 import com.example.team10.quiz.domain.Quiz;
 import com.example.team10.quiz.dto.QuizCreateRequest;
+import com.example.team10.quiz.dto.QuizResponse;
 import com.example.team10.user.UserRepository;
 import com.example.team10.user.domain.User;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -35,5 +37,12 @@ public class QuizSerivce {
                 .build();
 
         quizRepository.save(quiz);
+    }
+
+    @Transactional
+    public List<QuizResponse> getAllQuizSearchByUniqueNum(String uniqueNum){
+        User user = userRepository.findByUniqueNumber(uniqueNum);
+        return quizRepository.findAllByUser(user).stream()
+                .map(QuizResponse::new).toList();
     }
 }
