@@ -1,12 +1,15 @@
 package com.example.team10.answer;
 
 import com.example.team10.answer.domain.Answer;
+import com.example.team10.answer.domain.AnswerListResponse;
 import com.example.team10.user.UserRepository;
 import com.example.team10.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,6 +28,7 @@ public class AnswerServiceImpl implements AnswerService {
         Answer answer = Answer.builder()
                 .id(request.getId())
                 .user(user.get())
+                .tester(request.getTester())
                 .ans1(request.getAns1())
                 .ans2(request.getAns2())
                 .ans3(request.getAns3())
@@ -33,7 +37,13 @@ public class AnswerServiceImpl implements AnswerService {
                 .build();
 
         answerRepository.save(answer);
+    }
 
+    @Override
+    public List<AnswerListResponse> findAllAnswer() {
+
+        List<AnswerListResponse> responses = new ArrayList<>();
+        return responses;
     }
 
 }

@@ -12,6 +12,7 @@ public class AnswerRequest {
 
     private Long id;
     private Long user_id;
+    private String tester;
     private Long ans1;
     private Long ans2;
     private Long ans3;
