@@ -4,12 +4,13 @@ spring:
       ddl-auto: create-drop
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
         show_sql: true
     defer-datasource-initialization: true
 
   datasource:
-    url: "jdbc:mysql://localhost/Team10"
-    username: "root"
-    password: "" # MySQL ???? ??
-    driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/Team10
+      username: root
+      password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
