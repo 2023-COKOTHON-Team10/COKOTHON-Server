@@ -23,6 +23,7 @@ public class User {
     @Column(name = "user_name", nullable = false)
     private String name;
 
+    // 고유번호
     @Column(name = "user_uniquenumber")
     private String uniqueNumber;
 }
